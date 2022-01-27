@@ -4,7 +4,7 @@ servidor = "127.0.0.1"
 porta = 43220
 
 while True:
-    obj_socket = socket (AF_INET, SOCK_STREAM)
+    obj_socket = socket (AF_INET, SOCK_STREAM) #utilizando protocolo TCP
     obj_socket.connect ((servidor, porta))
     msg = bytes(input("Sua mensagem: "), 'utf-8')
     obj_socket.send(msg)
